@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adventure Trails - Trekking & Hiking</title>
+    <!-- External CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="website icon" type="jpg" href="images/WonderVenture_Logo.jpg" />
+
+    <!-- Custom CSS -->
+
+    <style>
+      /* General Styles */
+      .nav-link {
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      .nav-link:hover {
+        color: navy;
+        background-color: greenyellow;
+        transform: translateY(-5px);
+      }
+      .footer {
+        background-color: #000000;
+        color: white;
+        padding: 30px 0 15px;
+        margin-top: 0;
+      }
+
+      .footer h5 {
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 8px;
+      }
+
+      .footer-links a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: greenyellow;
+        padding-left: 5px;
+      }
+
+      .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        background: #ffffff;
+        color: #000000;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+
+      /* Specific spacing for social media groups */
+      .social-links a:hover {
+        transform: translateY(-3px);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 15px;
+        margin-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Update button colors for black background */
+      .footer .btn-warning {
+        background-color: #ffffff;
+        border-color: #ffffff;
+        color: #000000;
+      }
+
+      .footer .btn-warning:hover {
+        background-color: greenyellow;
+        border-color: greenyellow;
+      }
+      .grad {
+        background-image: linear-gradient(
+          to bottom,
+          rgb(119, 26, 132),
+          rgb(192, 23, 113),
+          red,
+          orange,
+          yellow
+        );
+      }
+      .grad2 {
+        background-image: linear-gradient(
+          to bottom,
+          rgb(20, 170, 20),
+          rgb(20, 170, 20)
+        );
+      }
+
+      /* Card Image: Consistent Height */
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      /* Card Hover Effect: Brown shadow and greenyellow border */
+      .card:hover {
+        box-shadow: 0 8px 16px rgba(165, 42, 42, 0.5);
+        transform: translateY(-5px);
+        border: 1px solid #adff2f;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .grad {
+        background-image: linear-gradient(
+          to bottom right,
+          rgb(119, 26, 132),
+          rgb(192, 23, 113),
+          red,
+          orange,
+          yellow
+        );
+      }
+      .grad2 {
+        background-image: linear-gradient(
+          to bottom,
+          rgb(20, 170, 20),
+          rgb(20, 170, 20)
+        );
+      }
+    </style>
+  </head>
+
+  <body data-bs-spy="scroll">
+    <!-- Navigation -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+          <a class="navbar-brand flex" href="index.html">
+            <img
+              src="images/WonderVenture_Logo.jpg"
+              height="80px"
+              width="auto"
+              alt="Logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler ms-auto bg-white"
+            data-bs-toggle="collapse"
+            data-bs-target="#link"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="link">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="index.html"
+                  style="font-size: 1.3rem; margin-right: 20px"
+                >
+                  <i class="fa fa-home" style="font-size: 18px"></i> Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="about.html"
+                  style="font-size: 1.3rem; margin-right: 20px"
+                >
+                  <i class="fa fa-info-circle" style="font-size: 18px"></i>
+                  About Us
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="saputara.html"
+                  style="font-size: 1.3rem; margin-right: 20px"
+                >
+                  <i class="fas fa-hiking" style="font-size: 24px"></i>
+                  Treks/Camps Events
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="gallery.html"
+                  style="font-size: 1.3rem; margin-right: 20px"
+                >
+                  <i class="fa fa-image" style="font-size: 18px"></i> Gallery
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="contact.html"
+                  style="font-size: 1.3rem; margin-right: 20px"
+                >
+                  <i class="fa fa-address-book" style="font-size: 18px"></i>
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div style="padding-top: 170px">
+      <div
+        id="demo"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        style="padding-top: 50px"
+      >
+        <div class="carousel-indicators">
+          <button
+            style="border-radius: 50px 50px"
+            data-bs-target="#demo"
+            data-bs-slide-to="0"
+            class="active bg-secondary"
+          ></button>
+          <button
+            style="border-radius: 50%"
+            data-bs-target="#demo"
+            data-bs-slide-to="1"
+            class="bg-secondary"
+          ></button>
+          <button
+            style="border-radius: 50%"
+            data-bs-target="#demo"
+            data-bs-slide-to="2"
+            class="bg-secondary"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="images/s1.jpg"
+              style="width: 100%; height: auto"
+              alt="Saputara"
+            />
+            <div class="carousel-caption" style="margin-bottom: 150px">
+              <h3 class="display-4" align="center">Saputara</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/leh4.jpg" style="width: 100%; height: auto" alt="Leh" />
+          </div>
+          <div class="carousel-item">
+            <img src="images/polo4.jpg" style="width: 100%; height: auto" alt="Polo" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popular Treks Section -->
+    <section id="treks" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Popular Treks</h2>
+        <div class="row g-4" id="treksContainer">
+          <div class="col-md-4 col-sm-12">
+            <div class="card h-100">
+              <img src="images/s1.jpg" class="card-img-top" alt="Saputara Trek" />
+              <div class="card-body">
+                <h5 class="card-title">Saputara Trek</h5>
+                <p class="card-text">
+                  Experience the serene beauty of Saputara.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="card h-100">
+              <img src="images/leh4.jpg" class="card-img-top" alt="Leh Adventure" />
+              <div class="card-body">
+                <h5 class="card-title">Leh Adventure</h5>
+                <p class="card-text">Explore the rugged terrains of Leh.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="card h-100">
+              <img src="images/polo4.jpg" class="card-img-top" alt="Polo Peak Trek" />
+              <div class="card-body">
+                <h5 class="card-title">Polo Peak Trek</h5>
+                <p class="card-text">Conquer the challenging Polo Peak.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4 text-center">
+            <i class="fas fa-mountain feature-icon mb-3"></i>
+            <h4>Expert Guides</h4>
+            <p>Professional guides with years of experience.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fas fa-shield-alt feature-icon mb-3"></i>
+            <h4>Safety First</h4>
+            <p>Top-notch safety equipment and protocols.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fas fa-camera feature-icon mb-3"></i>
+            <h4>Photo Spots</h4>
+            <p>Stunning locations for perfect memories.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Contact Us</h2>
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <form id="contactForm">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-success w-100">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (Unchanged) -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="R1.html"
+                  ><i class="fas fa-chevron-right mr-2"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="R1.html"
+                  ><i class="fas fa-chevron-right mr-2"></i> Book Tickets</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <h5>Travel Info</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right mr-2"></i> Train Schedule</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right mr-2"></i> Travel Insurance</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right mr-2"></i> Holiday Packages</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right mr-2"></i> Travel
+                  Guidelines</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <h5>Contact Info</h5>
+            <ul class="footer-links">
+              <li><i class="fas fa-phone mr-2"></i> +91 1800-111-139</li>
+              <li>
+                <i class="fas fa-envelope mr-2"></i> care@indianrail.gov.in
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt mr-2"></i> New Delhi, India
+              </li>
+              <li><i class="fas fa-clock mr-2"></i> 24/7 Support</li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <h5>Connect With Us</h5>
+            <div class="social-links">
+              <a href="https://www.facebook.com"
+                ><i
+                  class="fab fa-facebook-f"
+                  style="
+                    color: white;
+                    font-size: 25px;
+                    background-color: blue;
+                    padding: 5px 7px;
+                    border-radius: 200px;
+                  "
+                ></i
+              ></a>
+              <a href="https://www.x.com"
+                ><i
+                  class="fab fa-twitter"
+                  style="
+                    color: white;
+                    font-size: 24px;
+                    background-color: blue;
+                    padding: 5px;
+                    border-radius: 200px;
+                  "
+                ></i
+              ></a>
+              <a href="https://www.instagram.com"
+                ><i
+                  class="fab fa-instagram grad"
+                  style="
+                    color: white;
+                    font-size: 24px;
+                    padding: 5px;
+                    border-radius: 200px;
+                  "
+                ></i
+              ></a>
+              <a href="https://www.linkedin.com"
+                ><i
+                  class="fab fa-linkedin-in"
+                  style="
+                    color: white;
+                    font-size: 25px;
+                    background-color: blue;
+                    padding: 5px;
+                    border-radius: 200px;
+                  "
+                ></i
+              ></a>
+              <a href="https://www.youtube.com"
+                ><i
+                  class="fab fa-youtube"
+                  style="color: red; font-size: 24px; margin-top: 6px"
+                ></i
+              ></a>
+              <a href="https://telegram.org/"
+                ><i
+                  class="fab fa-telegram"
+                  style="color: skyblue; font-size: 38px"
+                ></i
+              ></a>
+              <a href="https://www.whatsapp.com"
+                ><i
+                  class="fab fa-whatsapp grad2"
+                  style="
+                    color: white;
+                    font-size: 24px;
+                    padding: 5px;
+                    border-radius: 200px;
+                  "
+                ></i
+              ></a>
+            </div>
+            <div class="mt-4">
+              <h5>Download Our App</h5>
+              <a
+                href="https://play.google.com"
+                class="btn btn-warning btn-sm mt-2"
+                ><i class="fab fa-google-play mr-2"></i> Google Play</a
+              >
+              <a
+                href="https://www.apple.com/app-store/"
+                class="btn btn-warning btn-sm mt-2"
+                ><i class="fab fa-apple mr-2"></i> App Store</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 WonderVenture. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal Templates -->
+    <div id="modalContainer">
+      <!-- Modals will be dynamically inserted here -->
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-success w-100">Login</button>
+            </form>
+            <p class="text-center mt-3">
+              <a href="#" class="text-success">Forgot Password?</a> |
+              <a href="#" class="text-success">Register</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
