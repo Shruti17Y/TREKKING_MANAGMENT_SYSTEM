@@ -7,18 +7,6 @@ This project allows users to explore various trekking destinations, learn about 
 
 ---
 
-## 📖 Table of Contents
-- [Overview](#-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [How to Use](#-how-to-use)
-- [Screenshots](#-screenshots)
-- [Future Improvements](#-future-improvements)
-- [Author](#-author)
-- [License](#-license)
-
----
 
 ## 🚀 Overview
 The **Trekking Management System** is a static web project that presents trekking packages, locations, and services in a visually appealing and user-friendly layout.  
